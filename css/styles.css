@@ -1,0 +1,277 @@
+@font-face {
+    font-family: Wakanda-abc;
+    src: url(../fonts/nasalization-rg.otf);
+}
+
+@font-face {
+    font-family: Ea-Font;
+    src: url(../fonts/ea.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.header {
+    background-image: linear-gradient(to right, #fc2442, yellow, orange);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-family: Ea-Font;
+    position: relative;
+    text-decoration: none;
+    color: #2E2E38;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FE0000;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Ea-Font;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+#main {
+    background-color: transparent;
+}
+
+#main .text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 7%;
+}
+
+#main .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-list {
+    justify-content: center;
+    align-items: center;
+}
+
+.prices {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 900px;
+    background-color: transparent;
+}
+
+.prices .container {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    margin: 17px;
+    width: 400px;
+    height: 600px;
+    background-color: rgba(213, 207, 207, 0.731);
+    box-shadow: 6px 6px 36px 14px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 6px 6px 36px 14px rgba(0,0,0,0.36);
+    -moz-box-shadow: 6px 6px 36px 14px rgba(0,0,0,0.36);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.list li {
+    list-style-type: disc;
+    padding: 5px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    text-align: center;
+    border-radius: 80px;
+    width: 1080px;
+    height: 600px;
+    background-color: rgba(128, 128, 128, 0.459);
+    box-shadow: 6px 6px 36px 14px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 6px 6px 36px 14px rgba(0,0,0,0.36);
+    -moz-box-shadow: 6px 6px 36px 14px rgba(0,0,0,0.36);
+    margin: 50px auto 50px auto; /* Adds top margin and centers horizontally */
+    position: relative;
+}
+
+#about h3, #about h4 {
+    margin-top: 30px;
+    font-family: Ea-font;
+}
+
+.img-about {
+    width: 350px;
+}
+
+.footer {
+    background-color: #78787e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .left, .footer .right, .footer .bottom {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.footer .right {
+    text-align: right;
+}
+
+.footer h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bottom p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.blurry-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    display: none;
+}
+
+.white-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 90%;
+    max-height: 90%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    display: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Checkbox hack for toggling blurry background */
+#toggleBlurry:checked + .blurry-background {
+    display: block;
+}
+
+button:focus + .blurry-background {
+    display: block;
+}
+
+button:focus + .blurry-background + .white-box {
+    display: block;
+}
